@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html></html>
-<head></head>
+<head>
+    <h1>Welcome to Rock, Paper, Scissors!!</h1>
+</head>
 <body>
     <script>
         function computerPlay() {
@@ -21,21 +23,15 @@
                  return "You lose. Paper beats rock.";
              } else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors"){
                  return "You win. Rock beats scissors.";
-             } else {
-                 return "Something went wrong,please try again"
-             }
 
-             if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
+             } else  if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
                  return "You win. Paper beats rock!";
              } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "paper") {
                  return "Tied round. Try again!";
              } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors") {
                  return "You lose. Scissors beat paper.";
-             } else {
-                 return "Something went wrong,please try again"
-             }
-
-             if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
+                 
+             } else  if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
                  return "You lose. Rock beats scissors!";
              } else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
                  return "You win. Scissors beat paper.";
@@ -43,15 +39,18 @@
                  return "Tied round. Try again!";
              } else {
                  return "Something went wrong,please try again"
-             }
+             }  
+            
+
+            
         }
              function game() {
                 
                 let computerWinCounter = 0;
                 let playerWinCounter = 0;
-                 for (let i = 0; i<5; i++) { 
+                 for (let i = 0; i < 5; i++) { 
                      let computerSelection = computerPlay();
-                     let playerSelection = prompt("Choose rock, paper, or scissors.")
+                     let playerSelection = prompt("Choose rock, paper, or scissors.");
                      console.log(playRound(playerSelection, computerSelection));
                      if (playRound(playerSelection, computerSelection).includes("win")){
                          playerWinCounter++;
