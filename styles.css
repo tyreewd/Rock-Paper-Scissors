@@ -1,0 +1,26 @@
+
+#rock {
+    height: 200px;
+    width: 200px;
+     
+}
+
+#paper {
+    height: 200px;
+    width: 200px;
+}
+
+#scissors {
+    height: 200px;
+    width: 200px;    
+}
+
+button {
+    border: solid 0px;
+    padding:  0px;
+    
+}
+
+
+
+
